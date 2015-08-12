@@ -37,7 +37,7 @@ the cheating strategies (which manipulate/read what the opponent does):
 
 Also the pairwise performance of each strategy versus all others:
 
-.. figure:: http://axelrod-python.github.io/tournament/assets/stategies_payoff.svg
+.. figure:: http://axelrod-python.github.io/tournament/assets/strategies_payoff.svg
    :alt:
 
 Please do contribute :)
