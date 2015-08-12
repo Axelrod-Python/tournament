@@ -23,7 +23,7 @@ tournament. To run the tournament, you simply need to:
 
     $ python run_axelrod
 
-This automatically outputs a ``png`` file with the results. You can see
+This automatically outputs a ``svg`` file with the results. You can see
 the results from the latest run of the tournament here:
 
 .. figure:: http://axelrod-python.github.io/tournament/assets/strategies_boxplot.svg
@@ -62,3 +62,29 @@ You can run with all available CPUs with:
 ::
 
     $ python run_axelrod -p 0
+
+To re run the full set of results and output them to the `assets` directory
+simply run::
+
+    $ ./update_results.sh
+
+**Note that this uses the installed version of the axelrod library.**
+If you want to keep things tidy you can create a virtualenv and install the
+latest version of the library like so::
+
+    $ virtualenv env
+    $ source env/bin/activate
+    $ pip install git+https://github.com/Axelrod-Python/Axelrod@master
+
+If you have the Axelrod repository locally you can also run::
+
+    $ pip install path_to_axelrod
+
+If you have already installed :code:`axelrod` you can add the `-U` tag to update
+to the latest version of master::
+
+    $ pip install git+https://github.com/Axelrod-Python/Axelrod@master -U
+
+or::
+
+    $ pip install path_to_axelrod  -U
