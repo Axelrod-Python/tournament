@@ -26,18 +26,18 @@ tournament. To run the tournament, you simply need to:
 This automatically outputs a ``png`` file with the results. You can see
 the results from the latest run of the tournament here:
 
-.. figure:: ./assets/strategies_boxplot.png
+.. figure:: http://axelrod-python.github.io/tournament/assets/strategies_boxplot.svg
    :alt:
 
 You can see the results from the latest run of the tournament here with
 the cheating strategies (which manipulate/read what the opponent does):
 
-.. figure:: ./assets/all_strategies_boxplot.png
+.. figure:: http://axelrod-python.github.io/tournament/assets/all_strategies_boxplot.svg
    :alt:
 
 Also the pairwise performance of each strategy versus all others:
 
-.. figure:: ./assets/strategies_payoff.png
+.. figure:: http://axelrod-python.github.io/tournament/assets/stategies_payoff.svg
    :alt:
 
 Please do contribute :)
