@@ -2,7 +2,7 @@
 # Update the noisy tournaments
 echo "-- Regenerating noisy tournament figures"
 # Run the noisy tournament
-./run_axelrod --noise 0.05 --rc --xc -p 0 -o assets
+./run_axelrod --noise 0.05 --rc -p 0 -o assets
 # Copy these figures over, renaming as appropriate
 mv assets/strategies_payoff.svg assets/strategies_payoff_noise_5.svg
 mv assets/strategies_boxplot.svg assets/strategies_boxplot_noise_5.svg
