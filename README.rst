@@ -16,7 +16,7 @@
 Results
 =======
 
-This repository contains Python (2.7) code that reproduces the
+This repository contains Python code that reproduces the
 tournament. To run the tournament, you simply need to:
 
 ::
