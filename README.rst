@@ -66,7 +66,7 @@ You can run with all available CPUs with:
 To re run the full set of results and output them to the `assets` directory
 simply run::
 
-    $ ./update_results.sh
+    $ ./update_results.sh 0 100  # Runs with all CPUS and 100 repetitions
 
 **Note that this uses the installed version of the axelrod library.**
 If you want to keep things tidy you can create a virtualenv and install the
