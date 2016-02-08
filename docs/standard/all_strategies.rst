@@ -1,5 +1,5 @@
 All Strategies (including cheaters)
-==================================
+===================================
 
 Ranked violin plot
 ------------------
