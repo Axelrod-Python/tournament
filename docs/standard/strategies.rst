@@ -1,4 +1,4 @@
-All Strategies (without cheaters)
+All ordinary_strategies (without cheaters)
 =================================
 
 Ranked violin plot
@@ -6,7 +6,7 @@ Ranked violin plot
 
 The mean utility of each player.
 
-.. figure:: ../../assets/strategies_boxplot.svg
+.. figure:: ../../assets/ordinary_strategies_boxplot.svg
    :alt: ranked violin plot
 
 Payoffs
@@ -14,15 +14,15 @@ Payoffs
 
 The pair wise utilities of each player.
 
-.. figure:: ../../assets/strategies_payoff.svg
+.. figure:: ../../assets/ordinary_strategies_payoff.svg
    :alt: payoffs
 
 Evolutionary dynamics
 ---------------------
 
-The evolutionary dynamic of the strategies (based on the utilities).
+The evolutionary dynamic of the ordinary_strategies (based on the utilities).
 
-.. figure:: ../../assets/strategies_reproduce.svg
+.. figure:: ../../assets/ordinary_strategies_reproduce.svg
    :alt: evolutionary dynamics
 
 Wins
@@ -30,7 +30,7 @@ Wins
 
 The number of wins of each player.
 
-.. figure:: ../../assets/strategies_winplot.svg
+.. figure:: ../../assets/ordinary_strategies_winplot.svg
    :alt: evolutionary dynamics
 
 Payoff differences
@@ -38,7 +38,7 @@ Payoff differences
 
 The payoff differences for each player.
 
-.. figure:: ../../assets/strategies_sdvplot.svg
+.. figure:: ../../assets/ordinary_strategies_sdvplot.svg
    :alt: evolutionary dynamics
 
 Pairwise payoff differences
@@ -46,5 +46,5 @@ Pairwise payoff differences
 
 The difference of payoffs between pairs of players.
 
-.. figure:: ../../assets/strategies_pdplot.svg
+.. figure:: ../../assets/ordinary_strategies_pdplot.svg
    :alt: evolutionary dynamics
