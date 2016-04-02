@@ -18,6 +18,7 @@ Contents:
 
    standard/index.rst
    noisy/index.rst
+   prob_end/index.rst
 
 
 Indices and tables
