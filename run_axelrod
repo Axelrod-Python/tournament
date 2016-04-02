@@ -5,9 +5,9 @@
 The code for strategies is present in `axelrod/strategies`.
 """
 
-
+from __future__ import division
 import argparse
-from axelrod import run_tournaments, setup_logging
+from axelrod import run_tournaments, run_prob_end_tournaments, setup_logging
 
 if __name__ == "__main__":
 
@@ -33,6 +33,13 @@ if __name__ == "__main__":
         type=int,
         default=200,
         help='turns per pair')
+
+    parser.add_argument(
+        '-pe',
+        '--prob_end',
+        type=float,
+        default=None,
+        help='probability of a match ending (if provided overrides turns)')
 
     parser.add_argument(
         '-r', '--repetitions',
@@ -100,6 +107,12 @@ if __name__ == "__main__":
         default=0,
         help='Noise level')
 
+    parser.add_argument(
+        '-i', '--image_format',
+        type=str,
+        default="svg",
+        help='Image format for matplotlib, e.g. svg, jpeg, png')
+
     args = parser.parse_args()
 
     if all([args.exclude_basic,
@@ -113,4 +126,10 @@ if __name__ == "__main__":
         kwargs = vars(args)
         del kwargs["logging_destination"]
         del kwargs["verbosity"]
-        run_tournaments(**kwargs)
+
+        if kwargs['prob_end'] is None:
+            del kwargs["prob_end"]
+            run_tournaments(**kwargs)
+        else:
+            del kwargs["turns"]
+            run_prob_end_tournaments(**kwargs)
