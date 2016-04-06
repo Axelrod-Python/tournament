@@ -1,11 +1,9 @@
 import axelrod as axl
-from run_noisy import turns, noise  # Grab the turns and noise used to create data
+from run_noisy import turns, noise, filename
 
 def label(prefix, results):
     return "{} - turns: {}, repetitions: {}, noise: {}, strategies: {}. ".format(prefix,
                 turns, results.nrepetitions, noise, results.nplayers)
-
-filename = "data/noisy_interactions.csv"
 
 if __name__ == '__main__':
     results = axl.ResultSetFromFile(filename)

@@ -1,11 +1,9 @@
 import axelrod as axl
-from run_probend import prob_end  # Grab the prob end used to create data
+from run_probend import prob_end, filename
 
 def label(prefix, results):
     return "{} - prob_end: {}, repetitions: {}, strategies: {}. ".format(prefix,
                 prob_end, results.nrepetitions, results.nplayers)
-
-filename = "data/probend_interactions.csv"
 
 if __name__ == '__main__':
     results = axl.ResultSetFromFile(filename)

@@ -7,8 +7,10 @@ processes = 0
 seed = 1
 filename = "data/strategies_std_interactions.csv"
 
-players = [s() for s in axl.ordinary_strategies]
-tournament = axl.Tournament(players, turns=turns, repetitions=repetitions, processes=processes)
+if __name__ == "__main__":
 
-random.seed(seed)  # Setting a seed
-tournament.play(filename)
+    players = [s() for s in axl.ordinary_strategies]
+    tournament = axl.Tournament(players, turns=turns, repetitions=repetitions, processes=processes)
+
+    random.seed(seed)  # Setting a seed
+    tournament.play(filename)
