@@ -6,7 +6,7 @@ Ranked violin plot
 
 The mean utility of each player.
 
-.. figure:: ../../assets/strategies_boxplot_noise_5.svg
+.. figure:: ../../assets/ordinary_strategies_boxplot_noise_5.svg
    :alt: ranked violin plot
 
 Payoffs
@@ -14,7 +14,7 @@ Payoffs
 
 The pair wise utilities of each player.
 
-.. figure:: ../../assets/strategies_payoff_noise_5.svg
+.. figure:: ../../assets/ordinary_strategies_payoff_noise_5.svg
    :alt: payoffs
 
 Evolutionary dynamics
