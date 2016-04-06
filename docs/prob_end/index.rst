@@ -7,6 +7,4 @@ Contents:
    :maxdepth: 2
 
    basic.rst
-   strategies.rst
-   all_strategies.rst
-   cheaters.rst
+   ordinary_strategies.rst

@@ -48,3 +48,11 @@ The difference of payoffs between pairs of players.
 
 .. figure:: ../../assets/basic_strategies_prob_end_pdplot.svg
    :alt: evolutionary dynamics
+
+Match lengths
+-------------
+
+The length of the matches
+
+.. figure:: ../../assets/basic_strategies_prob_end_lengthplot.svg
+   :alt: evolutionary dynamics
