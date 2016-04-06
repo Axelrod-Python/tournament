@@ -22,7 +22,7 @@ Evolutionary dynamics
 
 The evolutionary dynamic of the strategies (based on the utilities).
 
-.. figure:: ../../assets/strategies_reproduce_noise_5.svg
+.. figure:: ../../assets/ordinary_strategies_reproduce_noise_5.svg
    :alt: evolutionary dynamics
 
 Wins
@@ -30,7 +30,7 @@ Wins
 
 The number of wins of each player.
 
-.. figure:: ../../assets/strategies_winplot_noise_5.svg
+.. figure:: ../../assets/ordinary_strategies_winplot_noise_5.svg
    :alt: evolutionary dynamics
 
 Payoff differences
@@ -38,7 +38,7 @@ Payoff differences
 
 The payoff differences for each player.
 
-.. figure:: ../../assets/strategies_sdvplot_noise_5.svg
+.. figure:: ../../assets/ordinary_strategies_sdvplot_noise_5.svg
    :alt: evolutionary dynamics
 
 Pairwise payoff differences
@@ -46,5 +46,5 @@ Pairwise payoff differences
 
 The difference of payoffs between pairs of players.
 
-.. figure:: ../../assets/strategies_pdplot_noise_5.svg
+.. figure:: ../../assets/ordinary_strategies_pdplot_noise_5.svg
    :alt: evolutionary dynamics
