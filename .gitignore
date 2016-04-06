@@ -2,3 +2,4 @@ env
 .DS_Store
 axelrod.log
 docs/_build/
+data/

@@ -5,7 +5,7 @@ turns = 200
 repetitions = 100
 processes = 0
 seed = 1
-filename = "std_interactions.csv"
+filename = "data/strategies_std_interactions.csv"
 
 players = [s() for s in axl.ordinary_strategies]
 tournament = axl.Tournament(players, turns=turns, repetitions=repetitions, processes=processes)
