@@ -8,5 +8,3 @@ Contents:
 
    basic.rst
    strategies.rst
-   all_strategies.rst
-   cheaters.rst
