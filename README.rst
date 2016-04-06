@@ -11,10 +11,19 @@ library::
 
     $ pip install axelrod
 
-To re run the full set of results and output them to the `assets` directory
-simply run::
+To reproduce the smaller set of results simply run::
 
     $ ./update_results.sh 0 100  # Runs with all CPUS and 100 repetitions
+
+For the larger tournaments (dependent on the 520 branch of the main repository)::
+
+    python run_noisy.py  # Creates a data set in the folder data/
+    python run_std.py  # Creates a data set in the folder data/
+    python run_probend.py  # Creates a data set in the folder data/
+
+    python analyse_noisy.py  # Analyses the corresponding data set
+    python analyse_std.py  # Analyses the corresponding data set
+    python analyse_probend.py  # Analyses the corresponding data set
 
 **Note that this uses the installed version of the axelrod library.**
 If you want to keep things tidy you can create a virtualenv and install the
