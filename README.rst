@@ -15,7 +15,7 @@ To reproduce the smaller set of results simply run::
 
     $ ./update_results.sh 0 100  # Runs with all CPUS and 100 repetitions
 
-For the larger tournaments (dependent on the 520 branch of the main repository)::
+For the larger tournaments::
 
     python run_noisy.py  # Creates a data set in the folder data/
     python run_std.py  # Creates a data set in the folder data/
