@@ -1,6 +1,9 @@
 All Strategies (without cheaters) and 10% chance of match ending
 ===============================================================
 
+You can find all the interactions for this tournament here:
+https://zenodo.org/record/49347
+
 Ranked violin plot
 ------------------
 

@@ -1,6 +1,9 @@
 All Strategies (without cheaters) and 5% noise
 ==============================================
 
+You can find all the interactions for this tournament here:
+https://zenodo.org/record/49346
+
 Ranked violin plot
 ------------------
 
