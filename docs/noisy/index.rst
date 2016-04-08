@@ -7,4 +7,4 @@ Contents:
    :maxdepth: 2
 
    basic.rst
-   strategies.rst
+   ordinary_strategies.rst
