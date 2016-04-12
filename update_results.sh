@@ -4,6 +4,17 @@ processes="$1"
 repetitions="$2"
 
 
+# Update the noisy tournaments
+echo "-- Regenerating noisy tournament figures"
+# Run the noisy tournament
+python run_axelrod --noise 0.05 -p $processes -o assets -r $repetitions --xc --xs --xa
+# Copy these figures over, renaming as appropriate
+mv assets/basic_strategies_payoff.svg assets/basic_strategies_payoff_noise_5.svg
+mv assets/basic_strategies_boxplot.svg assets/basic_strategies_boxplot_noise_5.svg
+mv assets/basic_strategies_winplot.svg assets/basic_strategies_winplot_noise_5.svg
+mv assets/basic_strategies_sdvplot.svg assets/basic_strategies_sdvplot_noise_5.svg
+mv assets/basic_strategies_pdplot.svg assets/basic_strategies_pdplot_noise_5.svg
+
 # Running noiseless tournament
 echo "-- Running basic Axelrod, regenerating cache, results, and figures"
 python run_axelrod -p $processes -o assets -r $repetitions --xc --xs --xa
