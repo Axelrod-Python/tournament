@@ -1,9 +1,6 @@
 All ordinary_strategies (without cheaters)
 =================================
 
-You can find all the interactions for this tournament here:
-https://zenodo.org/record/49345
-
 Ranked violin plot
 ------------------
 

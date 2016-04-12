@@ -20,7 +20,7 @@ Contents:
    noisy/index.rst
    prob_end/index.rst
    reproducing.rst
-
+   data.rst
 
 Indices and tables
 ==================
