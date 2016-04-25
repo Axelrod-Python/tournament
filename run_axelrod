@@ -3,10 +3,11 @@
 Usage:
     run_axelrod [-h] [-t TURNS] [-e PROBEND] [-r REPETITIONS] [-n NOISE] [-o
     OUTPUTDIRECTORY] [-i IMAGE-FORMAT] [-c CACHE] [-p PROCESSES] [--rc] [--xb] [--xo] [--xc] [--xa]
+
 Options:
     -h --help                    show a help message
     -t TURNS                     turns per match [default: 200]
-    -e PROBEND                   probability of a match ending (if provided, overrides turns) [default: ""]
+    -e PROBEND                   probability of a match ending (if provided, overrides turns) [default: None]
     -r REPETITIONS               repetitions of each tournament [default: 100]
     -n NOISE                     noise level [default: 0]
     -o OUTPUT-DIRECTORY          output directory [default: None]
@@ -75,11 +76,11 @@ def run_tournament(players, turns=200, repetitions=100, prob_end=None,
         label = "Prob end: {}, repetitions: {}, noise: {}, strategies: {}. ".format(prob_end, tournament.repetitions, noise, len(tournament.players))
 
     else:
-        tournament = axl.ProbEndTournament(players, repetitions=repetitions,
-                                           turns=turns, noise=noise,
-                                           processes=processes,
-                                           deterministic_cache=cache)
-        label = "Turns: {}, repetitions: {}, noise: {}, strategies: {}. ".format(turns, tournament.repetitions, noise, len(tournament.nplayers))
+        tournament = axl.Tournament(players, repetitions=repetitions,
+                                    turns=turns, noise=noise,
+                                    processes=processes,
+                                    deterministic_cache=cache)
+        label = "Turns: {}, repetitions: {}, noise: {}, strategies: {}. ".format(turns, tournament.repetitions, noise, len(tournament.players))
 
     return tournament.play(), label
 
@@ -90,7 +91,6 @@ if __name__ == '__main__':
     # Parse arguments
     turns = int(arguments['-t'])
     repetitions = int(arguments['-r'])
-    prob_end = float(arguments['-e'])
     noise = float(arguments['-n'])
     processes = eval(arguments['-p'])
 
@@ -100,6 +100,11 @@ if __name__ == '__main__':
     cache_file = arguments['-c']
     if cache_file == "None":
         cache_file = None
+    prob_end = arguments['-e']
+    if prob_end == "None":
+        prob_end = None
+    else:
+        prob_end = float(prob_end)
 
     image_format = arguments['-i']
     rebuild_cache = arguments['--rc']
