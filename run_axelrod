@@ -96,7 +96,7 @@ if __name__ == '__main__':
 
     output_directory = arguments['-o']
     if output_directory == "None":
-        output_directory = None
+        output_directory = ""
     cache_file = arguments['-c']
     if cache_file == "None":
         cache_file = None
