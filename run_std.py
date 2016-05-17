@@ -10,7 +10,7 @@ filename = "data/strategies_std_interactions.csv"
 if __name__ == "__main__":
 
     players = [s() for s in axl.ordinary_strategies]
-    tournament = axl.Tournament(players, turns=turns, repetitions=repetitions, processes=processes)
+    tournament = axl.Tournament(players, turns=turns, repetitions=repetitions)
 
     random.seed(seed)  # Setting a seed
-    tournament.play(filename)
+    tournament.play(filename=filename, processes=processes)
