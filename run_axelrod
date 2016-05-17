@@ -71,18 +71,16 @@ def run_tournament(players, turns=200, repetitions=100, prob_end=None,
     if prob_end is not None:
         tournament = axl.ProbEndTournament(players, repetitions=repetitions,
                                            prob_end=prob_end, noise=noise,
-                                           processes=processes,
                                            deterministic_cache=cache)
         label = "Prob end: {}, repetitions: {}, noise: {}, strategies: {}. ".format(prob_end, tournament.repetitions, noise, len(tournament.players))
 
     else:
         tournament = axl.Tournament(players, repetitions=repetitions,
                                     turns=turns, noise=noise,
-                                    processes=processes,
                                     deterministic_cache=cache)
         label = "Turns: {}, repetitions: {}, noise: {}, strategies: {}. ".format(turns, tournament.repetitions, noise, len(tournament.players))
 
-    return tournament.play(), label
+    return tournament.play(processes=processes), label
 
 
 if __name__ == '__main__':
