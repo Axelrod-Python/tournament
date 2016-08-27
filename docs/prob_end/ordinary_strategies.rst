@@ -56,3 +56,9 @@ The length of the matches
 
 .. figure:: ../../assets/ordinary_strategies_prob_end_lengthplot.svg
    :alt: evolutionary dynamics
+
+Ranks
+-----
+
+Here is a :download:`file with the ranked strategies
+<../../assets/prob_end_ordinary_ranks.csv>`.

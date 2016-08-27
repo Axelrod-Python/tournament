@@ -48,3 +48,9 @@ The difference of payoffs between pairs of players.
 
 .. figure:: ../../assets/ordinary_strategies_pdplot_noise_5.svg
    :alt: evolutionary dynamics
+
+Ranks
+-----
+
+Here is a :download:`file with the ranked strategies
+<../../assets/noisy_ordinary_ranks.csv>`.

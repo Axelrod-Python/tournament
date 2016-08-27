@@ -1,4 +1,5 @@
 import axelrod as axl
+from analyse_std import write_ranks
 from run_noisy import turns, noise, filename
 
 def label(prefix, results):
@@ -29,3 +30,5 @@ if __name__ == '__main__':
     eco.reproduce(1000)
     f = plot.stackplot(eco, title=label("Eco", results))
     f.savefig("assets/ordinary_strategies_reproduce_noise_5.svg")
+
+    write_ranks(results, "assets/noisy_ordinary_ranks.csv")
