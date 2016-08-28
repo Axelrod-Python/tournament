@@ -3,9 +3,7 @@ import os
 import utils
 
 prob_end = .1
-#repetitions = 100
-repetitions = 2
-
+repetitions = 100
 processes = 0
 seed = 1
 filename = "data/strategies_probend_interactions.csv"
