@@ -22,4 +22,4 @@ if __name__ == '__main__':
     players = [s() for s in axl.ordinary_strategies]
     tournament = axl.Tournament(players, turns=turns, repetitions=repetitions, noise=noise)
 
-    tournament.play(filename=filename, processes=processes)
+    tournament.play(filename=filename, processes=processes, build_results=False)
