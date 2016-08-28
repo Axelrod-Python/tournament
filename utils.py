@@ -58,7 +58,7 @@ def summary_data(results, filepath=None):
     return summary_data
 
 def obtain_assets(results, strategies_name, tournament_type,
-                  assets_dir="./assets/", lengthplot=False):
+                  assets_dir="./assets", lengthplot=False):
     """
     From the results of a tournament: obtain the various plots and the summary
     data set
@@ -70,7 +70,7 @@ def obtain_assets(results, strategies_name, tournament_type,
         strategies_name: string, eg: "ordinary_strategies"
         tournament_type: string, eg: "std"
 
-        assets_dir: string [default: "./assets/"]
+        assets_dir: string [default: "./assets"]
         lengthplot: boolean [default: False], whether or not to plot the length
         of the matches (only needed for the probabilistic ending matches)
     """
