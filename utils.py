@@ -1,10 +1,10 @@
 """
 A script with utility functions to get the tournament results
 """
-from numpy import median
-import axelrod as axl
-from run_std import turns, filename
 from collections import namedtuple
+from numpy import median
+from run_std import turns, filename
+import axelrod as axl
 import csv
 import tqdm
 
