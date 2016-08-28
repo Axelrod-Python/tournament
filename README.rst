@@ -11,19 +11,15 @@ library::
 
     $ pip install axelrod
 
-To reproduce the smaller set of results simply run::
+To reproduce these results run::
 
-    $ ./update_results.sh 0 100  # Runs with all CPUS and 100 repetitions
+    python run_noisy.py  # Run the noisy tournament
+    python run_std.py  # Run the standard tournament
+    python run_probend.py  # Run the probabilistic ending tournament
 
-For the larger tournaments::
+You can also run all three tournaments (in series)::
 
-    python run_noisy.py  # Creates a data set in the folder data/
-    python run_std.py  # Creates a data set in the folder data/
-    python run_probend.py  # Creates a data set in the folder data/
-
-    python analyse_noisy.py  # Analyses the corresponding data set
-    python analyse_std.py  # Analyses the corresponding data set
-    python analyse_probend.py  # Analyses the corresponding data set
+    python run_all.py
 
 **Note that this uses the installed version of the axelrod library.**
 If you want to keep things tidy you can create a virtualenv and install the

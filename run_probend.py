@@ -1,23 +1,30 @@
 import axelrod as axl
-import random
 import os
+import utils
 
 prob_end = .1
-repetitions = 100
+#repetitions = 100
+repetitions = 2
+
 processes = 0
 seed = 1
 filename = "data/strategies_probend_interactions.csv"
 
-if __name__ == "__main__":
+def main():
     # Deleting the file if it exists
     try:
         os.remove(filename)
     except OSError:
         pass
 
-    random.seed(seed)  # Setting a seed
+    axl.seed(seed)  # Setting a seed
 
     players = [s() for s in axl.ordinary_strategies]
-    tournament = axl.ProbEndTournament(players, prob_end=prob_end, repetitions=repetitions)
+    tournament = axl.ProbEndTournament(players, prob_end=prob_end,
+                                       repetitions=repetitions)
 
-    tournament.play(filename=filename, processes=processes, build_results=False)
+    results = tournament.play(filename=filename, processes=processes)
+    utils.obtain_assets(results, "strategies", "probend")
+
+if __name__ == "__main__":
+    main()
