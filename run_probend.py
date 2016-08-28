@@ -24,7 +24,7 @@ def main():
                                        repetitions=repetitions)
 
     results = tournament.play(filename=filename, processes=processes)
-    utils.obtain_assets(results, "strategies", "probend")
+    utils.obtain_assets(results, "strategies", "probend", lengthplot=True)
 
 if __name__ == "__main__":
     main()

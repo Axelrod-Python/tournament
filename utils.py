@@ -58,7 +58,7 @@ def summary_data(results, filepath=None):
     return summary_data
 
 def obtain_assets(results, strategies_name, tournament_type,
-                  assets_dir="./assets/"):
+                  assets_dir="./assets/", lengthplot=False):
     """
     From the results of a tournament: obtain the various plots and the summary
     data set
@@ -66,12 +66,18 @@ def obtain_assets(results, strategies_name, tournament_type,
     Parameters
     ----------
 
-        results: an axelrod.resultset instance
-        strategies_name: A string, eg: "ordinary_strategies"
-        tournament_type: A string, eg: "std"
+        results: axelrod.resultset instance
+        strategies_name: string, eg: "ordinary_strategies"
+        tournament_type: string, eg: "std"
+
+        assets_dir: string [default: "./assets/"]
+        lengthplot: boolean [default: False], whether or not to plot the length
+        of the matches (only needed for the probabilistic ending matches)
     """
 
-    pbar = tqdm.tqdm(total=6, desc="Obtaining plots")
+    total = 6 + int(lengthplot)
+
+    pbar = tqdm.tqdm(total=total, desc="Obtaining plots")
 
     file_path_root = "{}/{}_{}".format(assets_dir, strategies_name,
                                        tournament_type)
@@ -102,5 +108,10 @@ def obtain_assets(results, strategies_name, tournament_type,
     f = plot.stackplot(eco, title=label("Eco", results))
     f.savefig("{}_reproduce.svg".format(file_path_root))
     pbar.update()
+
+    if lengthplot is True:
+        f = plot.lengthplot(title=label("Length of matches", results))
+        f.savefig("{}_lengthplot.svg".format(file_path_root))
+        pbar.update()
 
     summary_data(results, "{}_ranks.csv".format(file_path_root))
