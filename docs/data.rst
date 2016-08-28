@@ -1,7 +1,7 @@
 Interaction data for large tournaments
 ======================================
 
-Interaction data for the 3 large tournaments (noisy, standard and probabilistic
+Interaction data for the 3 tournaments (noisy, standard and probabilistic
 ending) is available in these files:
 
 - strategies_noisy_interactions.csv
