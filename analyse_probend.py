@@ -1,5 +1,5 @@
 from run_probend import prob_end, filename
-from analyse_std import write_ranks
+from analyse_std import summary_data
 import axelrod as axl
 
 def label(prefix, results):
@@ -32,4 +32,4 @@ if __name__ == '__main__':
     f = plot.stackplot(eco, title=label("Eco", results))
     f.savefig("assets/ordinary_strategies_prob_end_reproduce.svg")
 
-    write_ranks(results, "assets/prob_end_ordinary_ranks.csv")
+    summary_data(results, "assets/prob_end_ordinary_ranks.csv")

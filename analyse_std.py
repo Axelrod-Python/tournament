@@ -1,23 +1,50 @@
 from numpy import median
 import axelrod as axl
 from run_std import turns, filename
+from collections import namedtuple
 import csv
 
 def label(prefix, results):
     return "{} - turns: {}, repetitions: {}, strategies: {}. ".format(prefix,
                 turns, results.nrepetitions, results.nplayers)
 
-def write_ranks(results, filepath):
+def summary_data(results, filepath=None):
     """
-    A function to write a csv file with the ranks and scores of each strategy
+    Obtain summary of performance of each strategy:
+    ordered by rank, including median normalised score and cooperation rating.
+
+    Parameters
+    ----------
+
+        results : axelrod.results
+        filepath : a filepath to which to write the data
+
+    Output
+    ------
+
+        A list of the form:
+
+        [[player name, median score, cooperation_rating],...]
+
+        If `filepath` is passed then a summary data file with the following headers will be written:
+
+        "Rank", "Name", "Median-score-per-turn", "Cooperation-rating"
     """
-    median_scores = sorted(map(median, results.normalised_scores), reverse=True)
-    with open(filepath, 'w') as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(["Rank", "Name", "Median-score-per-turn"])
-        for (rank, name), score in zip(enumerate(results.ranked_names),
-                                       median_scores):
-            writer.writerow([rank, name, score])
+
+    median_scores = map(median, results.normalised_scores)
+    player = namedtuple("Player", ["Rank", "Name", "Median_score", "Cooperation_rating"])
+
+    summary_data = [perf for perf in zip(results.players, median_scores, results.cooperating_rating)]
+    summary_data = [player(rank, *summary_data[i]) for rank, i in enumerate(results.ranking)]
+
+    if filepath is not None:
+        with open(filepath, 'w') as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow(player._fields)
+            for player in summary_data:
+                writer.writerow(player)
+
+    return summary_data
 
 if __name__ == '__main__':
     results = axl.ResultSetFromFile(filename)
@@ -44,4 +71,4 @@ if __name__ == '__main__':
     f = plot.stackplot(eco, title=label("Eco", results))
     f.savefig("assets/ordinary_strategies_reproduce.svg")
 
-    write_ranks(results, "assets/std_ordinary_ranks.csv")
+    summary_data(results, "assets/std_ordinary_ranks.csv")
