@@ -18,4 +18,4 @@ script:
   # Run the test suit with coverage
   - cd ..
   # Run the doctests
-  - python -m unittest test_utils.py
+  - python -m unittest test_utils
