@@ -9,8 +9,6 @@ Welcome to Axelrod-Python-Tournament's documentation!
 This documentation contains the latest results of the full tournament from the
 `Axelrod-Python project <https://github.com/Axelrod-Python/Axelrod>`_.
 
-Click on each type of tournament below to see plots of the results.
-
 Contents:
 
 .. toctree::

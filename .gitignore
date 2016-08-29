@@ -4,3 +4,4 @@ axelrod.log
 docs/_build/
 data/
 __pycache__/
+*pyc
