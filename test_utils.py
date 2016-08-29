@@ -34,3 +34,7 @@ class TestUtils(unittest.TestCase):
             csvreader = csv.reader(csvfile)
             ranked_names = [row[1] for row in csvreader][1:]
         self.assertEqual(ranked_names, self.results.ranked_names)
+
+    def test_obtain_assets(self):
+        """Just test that this runs without crashing"""
+        self.assertEqual(utils.obtain_assets(self.results, assets_dir="/tmp"), None)

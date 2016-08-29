@@ -57,7 +57,8 @@ def summary_data(results, filepath=None):
 
     return summary_data
 
-def obtain_assets(results, strategies_name, tournament_type,
+def obtain_assets(results, strategies_name="strategies",
+                  tournament_type="std",
                   assets_dir="./assets", lengthplot=False):
     """
     From the results of a tournament: obtain the various plots and the summary
