@@ -23,6 +23,7 @@ def main():
 
     results = tournament.play(filename=filename, processes=processes)
     utils.obtain_assets(results, "strategies", "probend", lengthplot=True)
+    results.write_summary('.assets/probend_summary.csv')
 
 if __name__ == "__main__":
     main()

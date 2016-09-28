@@ -15,48 +15,6 @@ def label(prefix, results):
     return "{} - turns: {}, repetitions: {}, strategies: {}. ".format(prefix,
                 turns, results.nrepetitions, results.nplayers)
 
-def summary_data(results, filepath=None):
-    """
-    Obtain summary of performance of each strategy:
-    ordered by rank, including median normalised score and cooperation rating.
-
-    Parameters
-    ----------
-
-        results : axelrod.results
-        filepath : a filepath to which to write the data
-
-    Output
-    ------
-
-        A list of the form:
-
-        [[player name, median score, cooperation_rating],...]
-
-        If `filepath` is passed then a summary data file with the following headers will be written:
-
-        "Rank", "Name", "Median-score-per-turn", "Cooperation-rating"
-    """
-
-    median_scores = map(median, results.normalised_scores)
-    player = namedtuple("Player", ["Rank", "Name",
-                                   "Median_score", "Cooperation_rating"])
-
-    summary_data = [perf for perf in zip(results.players,
-                                         median_scores,
-                                         results.cooperating_rating)]
-    summary_data = [player(rank, *summary_data[i]) for
-                    rank, i in enumerate(results.ranking)]
-
-    if filepath is not None:
-        with open(filepath, 'w') as csvfile:
-            writer = csv.writer(csvfile)
-            writer.writerow(player._fields)
-            for player in tqdm.tqdm(summary_data, desc="Writing summary data"):
-                writer.writerow(player)
-
-    return summary_data
-
 def obtain_assets(results, strategies_name="strategies",
                   tournament_type="std",
                   assets_dir="./assets", lengthplot=False):
@@ -114,5 +72,3 @@ def obtain_assets(results, strategies_name="strategies",
         f = plot.lengthplot(title=label("Length of matches", results))
         f.savefig("{}_lengthplot.svg".format(file_path_root))
         pbar.update()
-
-    summary_data(results, "{}_ranks.csv".format(file_path_root))
