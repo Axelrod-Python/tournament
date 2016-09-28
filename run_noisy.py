@@ -3,8 +3,8 @@ import os
 import utils
 
 
-turns = 20
-repetitions = 10
+turns = 200
+repetitions = 100
 noise = 0.05
 processes = 0
 seed = 1

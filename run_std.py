@@ -2,8 +2,8 @@ import axelrod as axl
 import os
 import utils
 
-turns = 20
-repetitions = 10
+turns = 200
+repetitions = 100
 
 processes = 0
 seed = 1
