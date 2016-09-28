@@ -55,4 +55,4 @@ Summary
 
 Here is a :download:`file with the rank, median score and cooperation rating of
 each strategy
-<../../assets/strategies_probend_ranks.csv>`.
+<../../assets/probend_summary.csv>`.
