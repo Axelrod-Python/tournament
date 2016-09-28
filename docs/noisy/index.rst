@@ -48,4 +48,4 @@ Summary
 
 Here is a :download:`file with the rank, median score and cooperation rating of
 each strategy
-<../../assets/strategies_noisy_ranks.csv>`.
+<../../assets/noisy_summary.csv>`.

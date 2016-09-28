@@ -3,8 +3,8 @@ import os
 import utils
 
 
-turns = 200
-repetitions = 100
+turns = 20
+repetitions = 10
 noise = 0.05
 processes = 0
 seed = 1
@@ -25,7 +25,7 @@ def main():
 
     results = tournament.play(filename=filename, processes=processes)
     utils.obtain_assets(results, "strategies", "noisy")
-    results.write_summary('.assets/noisy_summary.csv')
+    results.write_summary('assets/noisy_summary.csv')
 
 if __name__ == '__main__':
     main()

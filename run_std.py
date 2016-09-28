@@ -2,8 +2,8 @@ import axelrod as axl
 import os
 import utils
 
-turns = 200
-repetitions = 100
+turns = 20
+repetitions = 10
 
 processes = 0
 seed = 1
@@ -23,7 +23,7 @@ def main():
 
     results = tournament.play(filename=filename, processes=processes)
     utils.obtain_assets(results, "strategies", "std")
-    results.write_summary('.assets/std_summary.csv')
+    results.write_summary('assets/std_summary.csv')
 
 if __name__ == "__main__":
     main()
