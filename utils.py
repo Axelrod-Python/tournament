@@ -13,7 +13,7 @@ def label(prefix, results):
     A label used for the various plots
     """
     return "{} - turns: {}, repetitions: {}, strategies: {}. ".format(prefix,
-                turns, results.nrepetitions, results.nplayers)
+                turns, results.repetitions, results.nplayers)
 
 def obtain_assets(results, strategies_name="strategies",
                   tournament_type="std",
