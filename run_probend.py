@@ -2,13 +2,15 @@ import axelrod as axl
 import os
 import utils
 
+from players import players
+
 prob_end = .1
 repetitions = 100
 processes = 0
 seed = 1
 filename = "data/strategies_probend_interactions.csv"
 
-def main():
+def main(players=players):
     # Deleting the file if it exists
     try:
         os.remove(filename)
@@ -17,7 +19,6 @@ def main():
 
     axl.seed(seed)  # Setting a seed
 
-    players = [s() for s in axl.ordinary_strategies]
     tournament = axl.ProbEndTournament(players, prob_end=prob_end,
                                        repetitions=repetitions)
 

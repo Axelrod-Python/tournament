@@ -2,6 +2,7 @@ import axelrod as axl
 import os
 import utils
 
+from players import players
 
 turns = 200
 repetitions = 100
@@ -10,7 +11,7 @@ processes = 0
 seed = 1
 filename = "data/strategies_noisy_interactions.csv"
 
-def main():
+def main(players=players):
     # Deleting the file if it exists
     try:
         os.remove(filename)
@@ -19,7 +20,6 @@ def main():
 
     axl.seed(seed)  # Setting a seed
 
-    players = [s() for s in axl.ordinary_strategies]
     tournament = axl.Tournament(players, turns=turns, repetitions=repetitions,
                                 noise=noise)
 
