@@ -46,6 +46,4 @@ The difference of payoffs between pairs of players.
 Summary
 -------
 
-Here is a :download:`file with the rank, median score and cooperation rating of
-each strategy
-<../../assets/std_summary.csv>`.
+Here is a :download:`file with the summary data <../../assets/std_summary.csv>`.
