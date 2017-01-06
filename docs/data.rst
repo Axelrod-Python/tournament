@@ -9,4 +9,4 @@ ending) is available in these files:
 - strategies_probend_interactions.csv
 
 They can be found at the following archive (with DOI number):
-https://zenodo.org/record/230070.
+https://zenodo.org/record/231987.
