@@ -12,8 +12,9 @@ parameterized_players = [
     axl.GTFT(0.7),
     axl.GTFT(0.9),
     axl.MetaWinner(team=[
-        EvolvedHMM5, EvolvedLookerUp2_2_2, EvolvedFSM16, EvolvedANN5,
-        PSOGambler2_2_2, FoolMeOnce, DoubleCrosser, Gradual
+        axl.EvolvedHMM5, axl.EvolvedLookerUp2_2_2, axl.EvolvedFSM16,
+        axl.EvolvedANN5, axl.PSOGambler2_2_2, axl.FoolMeOnce,
+        axl.DoubleCrosser, axl.Gradual
     ]),
 ]
 
