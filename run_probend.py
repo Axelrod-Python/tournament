@@ -19,8 +19,8 @@ def main(players=players):
 
     axl.seed(seed)  # Setting a seed
 
-    tournament = axl.ProbEndTournament(players, prob_end=prob_end,
-                                       repetitions=repetitions)
+    tournament = axl.ProbEnd(players, prob_end=prob_end,
+                             repetitions=repetitions)
 
     results = tournament.play(filename=filename, processes=processes)
     utils.obtain_assets(results, "strategies", "probend", lengthplot=True)
