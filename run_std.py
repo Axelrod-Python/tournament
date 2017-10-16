@@ -7,7 +7,7 @@ from players import players
 turns = 200
 repetitions = 100
 
-processes = 0
+processes = 20
 seed = 1
 filename = "data/strategies_std_interactions.csv"
 

@@ -6,7 +6,7 @@ from players import players
 
 prob_end = .1
 repetitions = 100
-processes = 0
+processes = 20
 seed = 1
 filename = "data/strategies_probend_interactions.csv"
 
