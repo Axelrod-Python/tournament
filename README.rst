@@ -11,8 +11,10 @@ library::
 
     $ pip install axelrod
 
+
 To reproduce these results run::
 
+    mkdir data
     python run_noisy.py  # Run the noisy tournament
     python run_std.py  # Run the standard tournament
     python run_probend.py  # Run the probabilistic ending tournament
