@@ -17,10 +17,8 @@ def main(players=players):
     except OSError:
         pass
 
-    axl.seed(seed)  # Setting a seed
-
     tournament = axl.Tournament(players, prob_end=prob_end,
-                                repetitions=repetitions)
+                                repetitions=repetitions, seed=seed)
 
     results = tournament.play(filename=filename, processes=processes)
     utils.obtain_assets(results, "strategies", "probend", lengthplot=True)
