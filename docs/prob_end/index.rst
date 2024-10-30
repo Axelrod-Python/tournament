@@ -50,6 +50,11 @@ The length of the matches
 
 .. figure:: ../../assets/strategies_probend_lengthplot.svg
 
+Payoff Matrix
+-------------
+
+Here is a :download:`file with the payoff matrix<../../assets/strategies_probend_payoff_matrix.csv>`.
+
 Summary
 -------
 

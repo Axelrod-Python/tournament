@@ -43,7 +43,13 @@ The difference of payoffs between pairs of players.
 
 .. figure:: ../../assets/strategies_std_pdplot.svg
 
+Payoff Matrix
+-------------
+
+Here is a :download:`file with the payoff matrix<../../assets/strategies_std_payoff_matrix.csv>`.
+
 Summary
 -------
 
 Here is a :download:`file with the summary data <../../assets/std_summary.csv>`.
+

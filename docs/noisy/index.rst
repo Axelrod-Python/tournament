@@ -43,6 +43,11 @@ The difference of payoffs between pairs of players.
 
 .. figure:: ../../assets/strategies_noisy_pdplot.svg
 
+Payoff Matrix
+-------------
+
+Here is a :download:`file with the payoff matrix<../../assets/strategies_noisy_payoff_matrix.csv>`.
+
 Summary
 -------
 

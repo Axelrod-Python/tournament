@@ -2,7 +2,7 @@
 A script with utility functions to get the tournament results
 """
 from collections import namedtuple
-from numpy import median
+from numpy import median, array, savetxt
 from run_std import turns, filename
 import axelrod as axl
 import csv
@@ -72,3 +72,6 @@ def obtain_assets(results, strategies_name="strategies",
         f = plot.lengthplot(title=label("Length of matches", results))
         f.savefig("{}_lengthplot.svg".format(file_path_root))
         pbar.update()
+
+    payoff_matrix = array(results.payoff_matrix)
+    savetxt(fname=f"{file_path_root}_payoff_matrix.csv", X=payoff_matrix, delimiter=",")

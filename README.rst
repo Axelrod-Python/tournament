@@ -1,7 +1,174 @@
-|Join the chat at https://gitter.im/Axelrod-Python/Axelrod|
-
 This repository hold results for tournaments made possible by the
 `Axelrod-Project <https://github.com/Axelrod-Python/Axelrod>`_ python library.
+
+Tournament result
+=================
+
+Standard tournament
+-------------------
+
+Ranked violin plot
+******************
+
+The mean utility of each player.
+
+.. figure:: ../../assets/strategies_std_boxplot.svg
+
+Payoffs
+*******
+
+The pair wise utilities of each player.
+
+.. figure:: ../../assets/strategies_std_payoff.svg
+
+Evolutionary dynamics
+*********************
+
+The evolutionary dynamic of the strategies (based on the utilities).
+
+.. figure:: ../../assets/strategies_std_reproduce.svg
+
+Wins
+****
+
+The number of wins of each player.
+
+.. figure:: ../../assets/strategies_std_winplot.svg
+
+Payoff differences
+******************
+
+The payoff differences for each player.
+
+.. figure:: ../../assets/strategies_std_sdvplot.svg
+
+Pairwise payoff differences
+***************************
+
+The difference of payoffs between pairs of players.
+
+.. figure:: ../../assets/strategies_std_pdplot.svg
+
+Payoff Matrix
+*************
+
+Here is a :download:`file with the payoff matrix<../../assets/strategies_std_payoff_matrix.csv>`.
+
+Summary
+*******
+
+Here is a :download:`file with the summary data <../../assets/std_summary.csv>`.
+
+
+Noisy tournament
+----------------
+
+Ranked violin plot
+******************
+
+The mean utility of each player.
+
+.. figure:: ../../assets/strategies_noisy_boxplot.svg
+
+Payoffs
+*******
+
+The pair wise utilities of each player.
+
+.. figure:: ../../assets/strategies_noisy_payoff.svg
+
+Evolutionary dynamics
+*********************
+
+The evolutionary dynamic of the strategies (based on the utilities).
+
+.. figure:: ../../assets/strategies_noisy_reproduce.svg
+
+Wins
+****
+
+The number of wins of each player.
+
+.. figure:: ../../assets/strategies_noisy_winplot.svg
+
+Payoff differences
+******************
+
+The payoff differences for each player.
+
+.. figure:: ../../assets/strategies_noisy_sdvplot.svg
+
+Pairwise payoff differences
+***************************
+
+The difference of payoffs between pairs of players.
+
+.. figure:: ../../assets/strategies_noisy_pdplot.svg
+
+Payoff Matrix
+*************
+
+Here is a :download:`file with the payoff matrix<../../assets/strategies_noisy_payoff_matrix.csv>`.
+
+Summary
+*******
+
+Here is a :download:`file with the summary data <../../assets/noisy_summary.csv>`.
+
+Probabilistic ending tournament
+-------------------------------
+
+Ranked violin plot
+******************
+
+The mean utility of each player.
+
+.. figure:: ../../assets/strategies_probend_boxplot.svg
+
+Payoffs
+*******
+
+The pair wise utilities of each player.
+
+.. figure:: ../../assets/strategies_probend_payoff.svg
+
+Evolutionary dynamics
+*********************
+
+The evolutionary dynamic of the strategies (based on the utilities).
+
+.. figure:: ../../assets/strategies_probend_reproduce.svg
+
+Wins
+****
+
+The number of wins of each player.
+
+.. figure:: ../../assets/strategies_probend_winplot.svg
+
+Payoff differences
+******************
+
+The payoff differences for each player.
+
+.. figure:: ../../assets/strategies_probend_sdvplot.svg
+
+Pairwise payoff differences
+***************************
+
+The difference of payoffs between pairs of players.
+
+.. figure:: ../../assets/strategies_probend_pdplot.svg
+
+Payoff Matrix
+*************
+
+Here is a :download:`file with the payoff matrix<../../assets/strategies_probend_payoff_matrix.csv>`.
+
+Summary
+*******
+
+Here is a :download:`file with the summary data <../../assets/probend_summary.csv>`.
 
 Reproducing these results:
 ==========================
@@ -27,20 +194,17 @@ latest version of the library like so::
 
     $ virtualenv env
     $ source env/bin/activate
-    $ pip install git+https://github.com/Axelrod-Python/Axelrod@master
+    $ python -m pip install git+https://github.com/Axelrod-Python/Axelrod@master
 
 If you have the Axelrod repository locally you can also run::
 
-    $ pip install path_to_axelrod
+    $ python -m pip install path_to_axelrod
 
 If you have already installed :code:`axelrod` you can add the `-U` tag to update
 to the latest version of master::
 
-    $ pip install git+https://github.com/Axelrod-Python/Axelrod@master -U
+    $ python -m pip install git+https://github.com/Axelrod-Python/Axelrod@master -U
 
 or::
 
-    $ pip install path_to_axelrod  -U
-
-.. |Join the chat at https://gitter.im/Axelrod-Python/Axelrod| image:: https://badges.gitter.im/Join%20Chat.svg
-   :target: https://gitter.im/Axelrod-Python/Axelrod?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+    $ python -m pip install path_to_axelrod  -U
